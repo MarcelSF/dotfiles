@@ -21,6 +21,7 @@
 		"SublimeERB",
 		"SublimeLinter",
 		"SublimeLinter-rubocop",
-		"Theme - Darkmatter"
+		"Theme - Darkmatter",
+		"View In Browser"
 	]
 }

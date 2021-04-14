@@ -4,8 +4,8 @@
   interactive = auto
   status = auto
   ui = auto
-
-[color "branch"]
+  
+[ecolor "branch"]
   current = green
   remote = yellow
 
@@ -22,7 +22,8 @@
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
-
+  up = pull upstream master -X ours
+  pom = push origin master
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
 
@@ -47,5 +48,10 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = marcelsf23br@gmail.com
+	email = 39573049+MarcelSF@users.noreply.github.com
 	name = Marcel Fonseca
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
